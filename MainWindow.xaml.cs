@@ -23,9 +23,9 @@ namespace Week_8_list_view_second_try
         {
             InitializeComponent();
 
-            characterNames.Add(new ClassesDnd("Will"));
-            characterNames.Add(new ClassesDnd("Rafael"));
-            characterNames.Add(new ClassesDnd("Charles"));
+            characterNames.Add(new ClassesDnd("Will","McDurken",3,26, 14,9));
+            characterNames.Add(new ClassesDnd("Rafael", "Ragavan QuickSmith",3,24, 18, 16));
+            characterNames.Add(new ClassesDnd("Charles", "Conan" ,3,35,10, 17));
             lvCharacters.ItemsSource = characterNames;
 
 
@@ -37,8 +37,11 @@ namespace Week_8_list_view_second_try
 
             if(lvCharacters.SelectedIndex != -1)
             {
+                //ClassesDnd selectedCharacter = (ClassesDnd)lvCharacters.SelectedValue;
 
-                MessageBox.Show(lvCharacters.SelectedValue.ToString());
+                ClassesDnd selectedCharacter = (ClassesDnd)lvCharacters.SelectedValue as ClassesDnd;
+
+                MessageBox.Show(selectedCharacter.PlayerName);
             }
             else
             {

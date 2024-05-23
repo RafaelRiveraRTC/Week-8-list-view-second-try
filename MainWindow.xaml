@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFE01717" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <ListView x:Name="lvCharacters" Margin="497,72,33,166">
+        <ListView x:Name="lvCharacters" Margin="133,72,4,56">
             <ListView.View>
                 <GridView>
 
@@ -26,11 +26,63 @@
                         DisplayMemberBinding="{Binding PlayerName}"
                         />
 
+                    <GridViewColumn
+       
+                     Header = "Character Name"
+     
+                        DisplayMemberBinding="{Binding CharacterName}"
+                        />
+
+                    <GridViewColumn
+     
+Header = "Character Level"
+   
+   DisplayMemberBinding="{Binding Level}"
+   />
+
+                    <GridViewColumn
+       
+  Header = "Character Health"
+     
+     DisplayMemberBinding="{Binding Health}"
+     />
+
+                    
+
+                    <GridViewColumn
+       
+  Header = "Constitution"
+     
+     DisplayMemberBinding="{Binding Constitution}"
+     />
+
+                    <GridViewColumn
+     
+Header = "Intellegence"
+   
+   DisplayMemberBinding="{Binding Intellegence}"
+   />
+
+                    <GridViewColumn
+     
+Header = "Hacking"
+   
+   DisplayMemberBinding="{Binding Hacking}"
+   />
+
+                    <GridViewColumn
+     
+Header = "WillPower"
+   
+   DisplayMemberBinding="{Binding WillPower}"
+   />
+
+
 
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" Margin="48,267,626,103" BorderBrush="#FF154367" OpacityMask="#FF2A1E80" Click="Button_Click"/>
+        <Button Content="Button" Margin="9,369,665,1" BorderBrush="#FF154367" OpacityMask="#FF2A1E80" Click="Button_Click"/>
 
     </Grid>
 </Window>
